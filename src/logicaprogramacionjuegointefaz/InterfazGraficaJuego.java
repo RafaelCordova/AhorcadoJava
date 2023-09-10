@@ -25,6 +25,7 @@ public class InterfazGraficaJuego extends javax.swing.JFrame {
     public InterfazGraficaJuego() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setTitle("JUEGO AHORCADO CON ARREGLOS");
         iniciarComponentes();
         iniciarJuego();
     }
@@ -71,13 +72,15 @@ public class InterfazGraficaJuego extends javax.swing.JFrame {
         imagenesDelJuego();
     }
     public void palabras(){
-        arregloDePalabras = new String[5];
-        arregloDePalabras[0] = "angelo patrick";
-        arregloDePalabras[1] = "pato patrick";
-        arregloDePalabras[2] = "gallina patrick";
-        arregloDePalabras[3] = "perro patrick";
-        arregloDePalabras[4] = "gato patrick";
-    }
+       arregloDePalabras = new String[6];
+       arregloDePalabras[0] =  "rafael java";
+       arregloDePalabras[1] = "progra rafael";
+       arregloDePalabras[2] = "nei rafael";
+       arregloDePalabras[3] = "rafa javato";
+       arregloDePalabras[4] = "rafita corsa";
+       arregloDePalabras[5] = "rafa patrick";
+                         }
+    
     public void imagenesDelJuego(){
         imagenes = new ImageIcon[14];
         imagenes[0] = new ImageIcon(getClass().getResource("/Imagenes/Imagen1.png"));
@@ -238,16 +241,18 @@ public class InterfazGraficaJuego extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Teclado", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
 
         jButton1.setText("A");
-        jButton1.setPreferredSize(new java.awt.Dimension(42, 25));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("B");
         jButton2.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton3.setText("C");
-        jButton3.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton4.setText("D");
-        jButton4.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton5.setText("E");
         jButton5.setPreferredSize(new java.awt.Dimension(42, 25));
@@ -256,10 +261,8 @@ public class InterfazGraficaJuego extends javax.swing.JFrame {
         jButton6.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton7.setText("G");
-        jButton7.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton8.setText("H");
-        jButton8.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton9.setText("I");
         jButton9.setPreferredSize(new java.awt.Dimension(42, 25));
@@ -274,25 +277,19 @@ public class InterfazGraficaJuego extends javax.swing.JFrame {
         jButton12.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton13.setText("M");
-        jButton13.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton14.setText("N");
-        jButton14.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton15.setText("Ñ");
-        jButton15.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton16.setText("O");
-        jButton16.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton17.setText("P");
         jButton17.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton18.setText("Q");
-        jButton18.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton19.setText("R");
-        jButton19.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton20.setText("S");
         jButton20.setPreferredSize(new java.awt.Dimension(42, 25));
@@ -301,10 +298,8 @@ public class InterfazGraficaJuego extends javax.swing.JFrame {
         jButton21.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton22.setText("U");
-        jButton22.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton23.setText("V");
-        jButton23.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton24.setText("W");
         jButton24.setPreferredSize(new java.awt.Dimension(42, 25));
@@ -313,7 +308,6 @@ public class InterfazGraficaJuego extends javax.swing.JFrame {
         jButton25.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton26.setText("Y");
-        jButton26.setPreferredSize(new java.awt.Dimension(42, 25));
 
         jButton27.setText("Z");
         jButton27.setPreferredSize(new java.awt.Dimension(42, 25));
@@ -386,40 +380,40 @@ public class InterfazGraficaJuego extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3)
+                    .addComponent(jButton4)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton7)
+                    .addComponent(jButton8)
                     .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton13)
+                    .addComponent(jButton14)
+                    .addComponent(jButton15)
+                    .addComponent(jButton16)
                     .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton18))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton19)
                     .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton22)
+                    .addComponent(jButton23)
                     .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton26)
                     .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(61, Short.MAX_VALUE))
         );
@@ -526,6 +520,10 @@ public class InterfazGraficaJuego extends javax.swing.JFrame {
         //VAMOS A REINICIAR EL JEUGO
         iniciarJuego();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     //BUENO AMIGOS ESO SERÍA TODO ESPERO QUE LES GUSTE RECUERDEN QUE LINK DEL CÓDIGO LO DEJARÉ EN LA PARTE DE MI PÁGINA DE FACEBOOK, MUCHAS GRACIAS Y HASTA LUEGO :)
     public static void main(String args[]) {
