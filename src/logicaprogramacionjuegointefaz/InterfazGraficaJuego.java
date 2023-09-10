@@ -8,7 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 public class InterfazGraficaJuego extends javax.swing.JFrame {
-    //vamos a reciclar el codigo que ya hicismos en la primera parte del video
+ 
     JButton[] botones;
     String palabraOficial;
     String[] arregloDePalabras;
@@ -98,11 +98,9 @@ public class InterfazGraficaJuego extends javax.swing.JFrame {
         imagenes[12] = new ImageIcon(getClass().getResource("/Imagenes/vida1.png"));
         imagenes[13] = new ImageIcon(getClass().getResource("/Imagenes/vida0.png"));
         
-        //pueden insertar cualquier imagen
     }
     public String palabraAle(){
         int n = (int)(Math.random() * arregloDePalabras.length);
-        //tenemos que retornar la palabra, pero en mayusculas
         return arregloDePalabras[n].toUpperCase();
     }
     public void iniciarJuego(){
@@ -525,7 +523,6 @@ public class InterfazGraficaJuego extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    //BUENO AMIGOS ESO SERÍA TODO ESPERO QUE LES GUSTE RECUERDEN QUE LINK DEL CÓDIGO LO DEJARÉ EN LA PARTE DE MI PÁGINA DE FACEBOOK, MUCHAS GRACIAS Y HASTA LUEGO :)
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
